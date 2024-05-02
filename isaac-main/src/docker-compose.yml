@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    container_name: my-project-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "${postgres_pass}" 
+      POSTGRES_USER: "${postgres_user}"
+      POSTGRES_DB: "${postgres_db}"
+    ports:
+      - "5432:5432"
+    volumes: 
+      - my_db_files:/var/lib/postgresql/data
+  
+  adminer:
+    image: adminer
+    container_name: adminer-container
+    restart: always
+    ports:
+       - 8080:8080
+volumes:
+  my_db_files:
+

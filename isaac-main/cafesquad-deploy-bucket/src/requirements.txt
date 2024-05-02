@@ -1,0 +1,9 @@
+cffi==1.14.4
+cryptography==41.0.0
+pycparser==2.20
+six==1.16.0
+sqlalchemy==1.4.39
+psycopg2-binary==2.9.3
+redshift-connector==2.0.917
+python-dateutil==2.8.2
+pytz==2021.3
